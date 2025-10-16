@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import van from "../assets/image 54.png";
 import MyContainer from "../MyContainer/MyContainer";
 
@@ -27,9 +28,12 @@ const About = () => {
           <h1 className="text-2xl/loose   font-bold text-[#161616] ">
             Your destination is waiting. Your van is ready
           </h1>
-          <button className="mt-2 font-bold btn btn-neutral rounded-2xl">
+          <Link
+            to={"/vans"}
+            className="mt-2 font-bold btn btn-neutral rounded-2xl"
+          >
             Explore our van
-          </button>
+          </Link>
         </div>
       </MyContainer>
     </div>
