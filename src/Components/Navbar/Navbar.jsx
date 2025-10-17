@@ -5,6 +5,10 @@ import MyLinks from "../../MyLinks/MyLinks";
 const Navbar = () => {
   const links = (
     <>
+      {" "}
+      <MyLinks to={"/host"} className="text-[#4D4D4D]  text-base ml-2 ">
+        Host
+      </MyLinks>
       <MyLinks
         to={"/about"}
         className="text-[#4D4D4D] font-semibold text-base ml-2 "

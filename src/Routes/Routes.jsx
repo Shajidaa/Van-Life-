@@ -4,6 +4,9 @@ import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Vans from "../Pages/Vans";
 import VanDetails from "../Pages/VanDetalis/VanDetails";
+import Host from "../Pages/Host/Host";
+import HostIncome from "../Pages/Host/HostIncome";
+import HostReviews from "../Pages/Host/HostReviews";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +30,20 @@ const router = createBrowserRouter([
         path: "/vanDetails/:id",
         Component: VanDetails,
         loader: () => fetch("/vans.json"),
+      },
+      {
+        path: "/host",
+        Component: Host,
+        children: [
+          {
+            path: "income",
+            Component: HostIncome,
+          },
+          {
+            path: "reviews",
+            Component: HostReviews,
+          },
+        ],
       },
     ],
   },
